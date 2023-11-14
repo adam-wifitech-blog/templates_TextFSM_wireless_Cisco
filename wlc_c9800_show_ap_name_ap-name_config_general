@@ -1,0 +1,281 @@
+Value Cisco_AP_Name (.*)
+Value Cisco_AP_Identifier (.*)
+Value Country_Code (.*)
+Value Regulatory_Domain_Allowed_by_Country (.*)
+Value AP_Country_Code (.*)
+Value AP_Regulatory_Domain_802_11bg (.*)
+Value AP_Regulatory_Domain_802_11a (.*)
+Value MAC_Address (.*)
+Value IP_Address_Configuration (.*)
+Value IP_Address (.*)
+Value IP_Netmask (.*)
+Value Gateway_IP_Address (.*)
+Value Fallback_IP_Address_Being_Used (.*)
+Value Domain (.*)
+Value Name_Server (.*)
+Value CAPWAP_Path_MTU (.*)
+Value Capwap_Active_Window_Size (.*)
+Value Telnet_State (.*)
+Value CPU_Type (.*)
+Value Memory_Type (.*)
+Value Memory_Size (.*)
+Value SSH_State (.*)
+Value Serial_Console_State (.*)
+Value Cisco_AP_Location (.*)
+Value Site_Tag_Name (.*)
+Value RF_Tag_Name (.*)
+Value Policy_Tag_Name (.*)
+Value AP_join_Profile (.*)
+Value Flex_Profile (.*)
+Value AP_Filter_name (.*)
+Value Primary_Cisco_Controller_Name (.*)
+Value Primary_Cisco_Controller_IP_Address (.*)
+Value Secondary_Cisco_Controller_Name (.*)
+Value Secondary_Cisco_Controller_IP_Address (.*)
+Value Tertiary_Cisco_Controller_Name (.*)
+Value Tertiary_Cisco_Controller_IP_Address (.*)
+Value Administrative_State (.*)
+Value Operation_State (.*)
+Value NAT_External_IP_Address (.*)
+Value AP_Certificate_type (.*)
+Value AP_Certificate_Expiry_time (.*)
+Value AP_Certificate_issuer_common_name (.*)
+Value AP_Certificate_Policy (.*)
+Value AP_CAPWAP_DTLS_LSC_Status_Certificate_status (.*)
+Value AP_8021x_LSC_StatusCertificate_status (.*)
+Value AP_LSC_authentication_state (.*)
+Value AP_Mode (.*)
+Value AP_VLAN_tagging_state (.*)
+Value AP_VLAN_tag (.*)
+Value CAPWAP_Preferred_mode (.*)
+Value CAPWAP_UDP_Lite (.*)
+Value AP_Submode (.*)
+Value Office_Extend_Mode (.*)
+Value Link_Encryption (.*)
+Value Dhcp_Server (.*)
+Value Remote_AP_Debug (.*)
+Value Logging_Trap_Severity_Level (.*)
+Value Logging_Syslog_facility (.*)
+Value Software_Version (.*)
+Value Boot_Version (.*)
+Value Mini_IOS_Version (.*)
+Value Stats_Reporting_Period (.*)
+Value LED_State (.*)
+Value MDNS_Group_Id (.*)
+Value MDNS_Rule_Name (.*)
+Value MDNS_Group_Method (.*)
+Value PoE_Pre_Standard_Switch (.*)
+Value PoE_Power_Injector_MAC_Address (.*)
+Value Power_Type_Mode (.*)
+Value Number_of_Slots (.*)
+Value AP_Model (.*)
+Value IOS_Version (.*)
+Value Reset_Button (.*)
+Value AP_Serial_Number (.*)
+Value Management_Frame_Validation (.*)
+Value Management_Frame_Protection (.*)
+Value AP_User_Name (.*)
+Value AP_802_1X_User_Mode (.*)
+Value AP_802_1X_User_Name (.*)
+Value Cisco_AP_System_Logging_Host (.*)
+Value Cisco_AP_Secured_Logging_TLS_mode (.*)
+Value AP_Up_Time (.*)
+Value AP_CAPWAP_Up_Time (.*)
+Value Join_Date_and_Time (.*)
+Value Join_Taken_Time (.*)
+Value Join_Priority (.*)
+Value AP_Link_Latency (.*)
+Value Current_Delay (.*)
+Value Maximum_Delay (.*)
+Value Minimum_Delay (.*)
+Value Last_Latency_Heartbeat_from_AP (.*)
+Value AP_Lag_Configuration_Status (.*)
+Value Lag_Support_for_AP (.*)
+Value Rogue_Detection (.*)
+Value Rogue_Containment_auto_rate (.*)
+Value Rogue_Containment_of_standalone_flexconnect_APs (.*)
+Value Rogue_Detection_Report_Interval (.*)
+Value Rogue_AP_minimum_RSSI (.*)
+Value Rogue_AP_minimum_transient_time (.*)
+Value AP_TCP_MSS_Adjust (.*)
+Value AP_TCP_MSS_Size (.*)
+Value AP_IPv6_TCP_MSS_Adjust (.*)
+Value AP_IPv6_TCP_MSS_Size (.*)
+Value Hyperlocation_Admin_Status (.*)
+Value Retransmit_count (.*)
+Value Retransmit_interval (.*)
+Value Fabric_status (.*)
+Value FIPS_status (.*)
+Value WLANCC_status (.*)
+Value USB_Module_Type (.*)
+Value USB_Module_State (.*)
+Value USB_Operational_State (.*)
+Value USB_Override (.*)
+Value GAS_rate_limit_Admin_status (.*)
+Value WPA3_Capability (.*)
+Value EWC_AP_Capability (.*)
+Value AWIPS_Capability (.*)
+Value AID_Management_Capability (.*)
+Value Proxy_Hostname (.*)
+Value Proxy_Port (.*)
+Value Proxy_NO_PROXY_list (.*)
+Value GRPC_server_status (.*)
+Value Unencrypted_Data_Keep_Alive (.*)
+Value Local_DHCP_Server (.*)
+Value Traffic_Distribution_Statistics_Capability (.*)
+Value Dual_DFS_Statistics_Capability (.*)
+Value AP_Upgrade_Out_Of_Band_Capability (.*)
+Value AP_statistics (.*)
+Value AP_power_derate_Capability (.*)
+Value AP_PMK_Propagation_Capability (.*)
+Value Mesh_DCA_Run_Status (.*)
+Value Last_Mesh_DCA_Run (.*)
+Value Meraki_Capable_AP (.*)
+
+
+Start
+  ^Cisco\sAP\sName\s+:\s+${Cisco_AP_Name}$$
+  ^[=\s]+$$
+  ^\s*$$
+  ^Cisco AP Identifier\s+:\s+${Cisco_AP_Identifier}$$
+  ^Country Code\s+:\s+Multiple Countries\s+:\s+${Country_Code}$$
+  ^Regulatory Domain Allowed by Country\s+:\s+${Regulatory_Domain_Allowed_by_Country}$$
+  ^AP Country Code\s+:\s+${AP_Country_Code}$$
+  ^AP Regulatory Domain -> RegDomain
+  ^MAC Address\s+:\s+${MAC_Address}$$
+  ^IP Address Configuration\s+:\s+${IP_Address_Configuration}$$
+  ^IP Address\s+:\s+${IP_Address}$$
+  ^IP Netmask\s+:\s+${IP_Netmask}$$
+  ^Gateway IP Address\s+:\s+${Gateway_IP_Address}$$
+  ^Fallback IP Address Being Used\s+:\s+${Fallback_IP_Address_Being_Used}$$
+  ^Domain\s+:\s+${Domain}$$
+  ^Name Server\s+:\s+${Name_Server}$$
+  ^CAPWAP Path MTU\s+:\s+${CAPWAP_Path_MTU}$$
+  ^Capwap Active Window Size\s+:\s+${Capwap_Active_Window_Size}$$
+  ^Telnet State\s+:\s+${Telnet_State}$$
+  ^CPU Type\s+:\s+${CPU_Type}$$
+  ^Memory Type\s+:\s+${Memory_Type}$$
+  ^Memory Size\s+:\s+${Memory_Size}$$
+  ^SSH State\s+:\s+${SSH_State}$$
+  ^Serial Console State\s+:\s+${Serial_Console_State}$$
+  ^Cisco AP Location\s+:\s+${Cisco_AP_Location}$$
+  ^Site Tag Name\s+:\s+${Site_Tag_Name}$$
+  ^RF Tag Name\s+:\s+${RF_Tag_Name}$$
+  ^Policy Tag Name\s+:\s+${Policy_Tag_Name}$$
+  ^AP join Profile\s+:\s+${AP_join_Profile}$$
+  ^Flex Profile\s+:\s+${Flex_Profile}$$
+  ^AP Filter name\s+:\s+${AP_Filter_name}$$
+  ^Primary Cisco Controller Name\s+:\s+${Primary_Cisco_Controller_Name}$$
+  ^Primary Cisco Controller IP Address\s+:\s+${Primary_Cisco_Controller_IP_Address}$$
+  ^Secondary Cisco Controller Name\s+:\s+${Secondary_Cisco_Controller_Name}$$
+  ^Secondary Cisco Controller IP Address\s+:\s+${Secondary_Cisco_Controller_IP_Address}$$
+  ^Tertiary Cisco Controller Name\s+:\s+${Tertiary_Cisco_Controller_Name}$$
+  ^Tertiary Cisco Controller IP Address\s+:\s+${Tertiary_Cisco_Controller_IP_Address}$$
+  ^Administrative State\s+:\s+${Administrative_State}$$
+  ^Operation State\s+:\s+${Operation_State}$$
+  ^NAT External IP Address\s+:\s+${NAT_External_IP_Address}$$
+  ^AP Certificate type\s+:\s+${AP_Certificate_type}$$
+  ^AP Certificate Expiry-time\s+:\s+${AP_Certificate_Expiry_time}$$
+  ^AP Certificate issuer common-name\s+:\s+${AP_Certificate_issuer_common_name}$$
+  ^AP Certificate Policy\s+:\s+${AP_Certificate_Policy}$$
+  ^AP CAPWAP-DTLS LSC Status -> DTLS_Status
+  ^AP 802.1x LSC Status -> 1x_Status
+  ^AP LSC authentication state\s+:\s+${AP_LSC_authentication_state}$$
+  ^AP Mode\s+:\s+${AP_Mode}$$
+  ^AP VLAN tagging state\s+:\s+${AP_VLAN_tagging_state}$$
+  ^AP VLAN tag\s+:\s+${AP_VLAN_tag}$$
+  ^CAPWAP Preferred mode\s+:\s+${CAPWAP_Preferred_mode}$$
+  ^CAPWAP UDP-Lite\s+:\s+${CAPWAP_UDP_Lite}$$
+  ^AP Submode\s+:\s+${AP_Submode}$$
+  ^Office Extend Mode\s+:\s+${Office_Extend_Mode}$$
+  ^Link-Encryption\s+:\s+${Link_Encryption}$$
+  ^Dhcp Server\s+:\s+${Dhcp_Server}$$
+  ^Remote AP Debug\s+:\s+${Remote_AP_Debug}$$
+  ^Logging Trap Severity Level\s+:\s+${Logging_Trap_Severity_Level}$$
+  ^Logging Syslog facility\s+:\s+${Logging_Syslog_facility}$$
+  ^Software Version\s+:\s+${Software_Version}$$
+  ^Boot Version\s+:\s+${Boot_Version}$$
+  ^Mini IOS Version\s+:\s+${Mini_IOS_Version}$$
+  ^Stats Reporting Period\s+:\s+${Stats_Reporting_Period}$$
+  ^LED State\s+:\s+${LED_State}$$
+  ^MDNS Group Id\s+:\s+${MDNS_Group_Id}$$
+  ^MDNS Rule Name\s+:\s+${MDNS_Rule_Name}$$
+  ^MDNS Group Method\s+:\s+${MDNS_Group_Method}$$
+  ^PoE Pre-Standard Switch\s+:\s+${PoE_Pre_Standard_Switch}$$
+  ^PoE Power Injector MAC Address\s+:\s+${PoE_Power_Injector_MAC_Address}$$
+  ^Power Type/Mode\s+:\s+${Power_Type_Mode}$$
+  ^Number of Slots\s+:\s+${Number_of_Slots}$$
+  ^AP Model\s+:\s+${AP_Model}$$
+  ^IOS Version\s+:\s+${IOS_Version}$$
+  ^Reset Button\s+:\s+${Reset_Button}$$
+  ^AP Serial Number\s+:\s+${AP_Serial_Number}$$
+  ^Management Frame Validation\s+:\s+${Management_Frame_Validation}$$
+  ^Management Frame Protection\s+:\s+${Management_Frame_Protection}$$
+  ^AP User Name\s+:\s+${AP_User_Name}$$
+  ^AP 802.1X User Mode\s+:\s+${AP_802_1X_User_Mode}$$
+  ^AP 802.1X User Name\s+:\s+${AP_802_1X_User_Name}$$
+  ^Cisco AP System Logging Host\s+:\s+${Cisco_AP_System_Logging_Host}$$
+  ^Cisco AP Secured Logging TLS mode\s+:\s+${Cisco_AP_Secured_Logging_TLS_mode}$$
+  ^AP Up Time\s+:\s+${AP_Up_Time}$$
+  ^AP CAPWAP Up Time\s+:\s+${AP_CAPWAP_Up_Time}$$
+  ^Join Date and Time\s+:\s+${Join_Date_and_Time}$$
+  ^Join Taken Time\s+:\s+${Join_Taken_Time}$$
+  ^Join Priority\s+:\s+${Join_Priority}$$
+  ^AP Link Latency\s+:\s+${AP_Link_Latency}$$
+  ^Current Delay\s+:\s+${Current_Delay}$$
+  ^Maximum Delay\s+:\s+${Maximum_Delay}$$
+  ^Minimum Delay\s+:\s+${Minimum_Delay}$$
+  ^Last Latency Heartbeat from AP\s+:\s+${Last_Latency_Heartbeat_from_AP}$$
+  ^AP Lag Configuration Status\s+:\s+${AP_Lag_Configuration_Status}$$
+  ^Lag Support for AP\s+:\s+${Lag_Support_for_AP}$$
+  ^Rogue Detection\s+:\s+${Rogue_Detection}$$
+  ^Rogue Containment auto-rate\s+:\s+${Rogue_Containment_auto_rate}$$
+  ^Rogue Containment of standalone flexconnect APs\s+:\s+${Rogue_Containment_of_standalone_flexconnect_APs}$$
+  ^Rogue Detection Report Interval\s+:\s+${Rogue_Detection_Report_Interval}$$
+  ^Rogue AP minimum RSSI\s+:\s+${Rogue_AP_minimum_RSSI}$$
+  ^Rogue AP minimum transient time\s+:\s+${Rogue_AP_minimum_transient_time}$$
+  ^AP TCP MSS Adjust\s+:\s+${AP_TCP_MSS_Adjust}$$
+  ^AP TCP MSS Size\s+:\s+${AP_TCP_MSS_Size}$$
+  ^AP IPv6 TCP MSS Adjust\s+:\s+${AP_IPv6_TCP_MSS_Adjust}$$
+  ^AP IPv6 TCP MSS Size\s+:\s+${AP_IPv6_TCP_MSS_Size}$$
+  ^Hyperlocation Admin Status\s+:\s+${Hyperlocation_Admin_Status}$$
+  ^Retransmit count\s+:\s+${Retransmit_count}$$
+  ^Retransmit interval\s+:\s+${Retransmit_interval}$$
+  ^Fabric status\s+:\s+${Fabric_status}$$
+  ^FIPS status\s+:\s+${FIPS_status}$$
+  ^WLANCC status\s+:\s+${WLANCC_status}$$
+  ^USB Module Type\s+:\s+${USB_Module_Type}$$
+  ^USB Module State\s+:\s+${USB_Module_State}$$
+  ^USB Operational State\s+:\s+${USB_Operational_State}$$
+  ^USB Override\s+:\s+${USB_Override}$$
+  ^GAS rate limit Admin status\s+:\s+${GAS_rate_limit_Admin_status}$$
+  ^WPA3 Capability\s+:\s+${WPA3_Capability}$$
+  ^EWC-AP Capability\s+:\s+${EWC_AP_Capability}$$
+  ^AWIPS Capability\s+:\s+${AWIPS_Capability}$$
+  ^AID Management Capability\s+:\s+${AID_Management_Capability}$$
+  ^Proxy Hostname\s+:\s+${Proxy_Hostname}$$
+  ^Proxy Port\s+:\s+${Proxy_Port}$$
+  ^Proxy NO_PROXY list\s+:\s+${Proxy_NO_PROXY_list}$$
+  ^GRPC server status\s+:\s+${GRPC_server_status}$$
+  ^Unencrypted Data Keep Alive\s+:\s+${Unencrypted_Data_Keep_Alive}$$
+  ^Local DHCP Server\s+:\s+${Local_DHCP_Server}$$
+  ^Traffic Distribution Statistics Capability\s+:\s+${Traffic_Distribution_Statistics_Capability}$$
+  ^Dual DFS Statistics Capability\s+:\s+${Dual_DFS_Statistics_Capability}$$
+  ^AP Upgrade Out-Of-Band Capability\s+:\s+${AP_Upgrade_Out_Of_Band_Capability}$$
+  ^AP statistics\s+:\s+${AP_statistics}$$
+  ^AP power derate Capability\s+:\s+${AP_power_derate_Capability}$$
+  ^AP PMK Propagation Capability\s+:\s+${AP_PMK_Propagation_Capability}$$
+  ^Mesh DCA Run Status\s+:\s+${Mesh_DCA_Run_Status}$$
+  ^Last Mesh DCA Run\s+:\s+${Last_Mesh_DCA_Run}$$
+  ^Meraki Capable AP\s+:\s+${Meraki_Capable_AP}$$
+  ^-> Record
+
+RegDomain
+  ^\s+802.11bg\s+:\s+${AP_Regulatory_Domain_802_11bg}
+  ^\s+802.11a\s+:\s+${AP_Regulatory_Domain_802_11a} -> Start
+
+DTLS_Status
+ ^\s+Certificate status\s+:\s+${AP_CAPWAP_DTLS_LSC_Status_Certificate_status} -> Start
+
+1x_Status
+ ^\s+Certificate status\s+:\s+${AP_8021x_LSC_StatusCertificate_status} -> Start
