@@ -1,0 +1,16 @@
+Value AP_Name (\S+)
+Value Slots (\d)
+Value AP_Model (\S+)
+Value Ethernet_MAC ([a-fA-F0-9:\.]+)
+Value Radio_MAC ([a-fA-F0-9:\.]+)
+Value CC (\S+)
+Value RD (\S+)
+Value IP_Address ([0-9\.]+)
+Value State (\S+)
+Value Location (.+?)
+
+Start
+  ^-+ -> APs
+
+APs
+  ^${AP_Name}\s+${Slots}\s+${AP_Model}\s+${Ethernet_MAC}\s+${Radio_MAC}\s+${CC}\s+${RD}\s+${IP_Address}\s+${State}\s+${Location} -> Record
