@@ -1,0 +1,29 @@
+Value MAC_Address ([a-fA-F0-9:\.]+)
+Value SSID ([\S ]+?)
+Value AP_Name (\S+)
+Value State (\S+)
+Value IP_Address (\d+\.\d+\.\d+\.\d+)
+Value Device_type ([\S ]+?)
+Value VLAN (\d+)
+Value BSSID ([a-fA-F0-9:\.]+)
+Value Auth_Method (\[.+?\])
+Value Created ([\d+:]+)
+Value Connected ([\d+:]+)
+Value Protocol (\S+)
+Value Channel (\d+)
+Value Width ([\d+/]+)
+Value SGI ([A-Z/]+)
+Value NSS ([\d/]+)
+Value Rate ((m\d+\s+ss\d+)|(m\d+)|(\d+\.\d+)|())
+Value CAP (EVRK|EV\sK|EV|E)
+Value Username (.*?)
+Value Rx_packets (\d+)
+Value Tx_packets (\d+)
+Value Rx_bytes (\d+)
+Value Tx_bytes (\d+)
+
+Start
+  ^-+ -> Clients
+
+Clients
+  ^${MAC_Address}\s+${SSID}\s+${AP_Name}\s+${State}\s+${IP_Address}\s+${Device_type}\s+${VLAN}\s+${BSSID}\s+${Auth_Method}\s+${Created}\s+${Connected}\s+${Protocol}\s+${Channel}\s+${Width}\s+${SGI}\s+${NSS}\s+${Rate}\s+${CAP}\s+${Username}\s+${Rx_packets}\s+${Tx_packets}\s+${Rx_bytes}\s+${Tx_bytes} -> Record
