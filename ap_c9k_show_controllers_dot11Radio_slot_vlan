@@ -1,0 +1,13 @@
+Value Vlan (\d+)
+Value BSSID (\S+)
+Value Pri (\d+)
+Value U (\d+)
+Value M (\d+)
+Value EncryPolicy (\S+)
+Value Keys ([\S\s]*?)
+Value iGTK (\S+)
+Value SSIDs (\S+)
+Value MFP (\d)
+
+Start
+  ^\s*${Vlan}\s+${BSSID}\s+${Pri}\s+${U}\s+${M}\s+${EncryPolicy}\s+${Keys}\s+${iGTK}\s+${SSIDs}\s+${MFP} -> Record
