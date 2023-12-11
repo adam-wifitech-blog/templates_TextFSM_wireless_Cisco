@@ -1,0 +1,14 @@
+Value Radio (\d+)
+Value Vap (\d+)
+Value SSID (\S.*?|)
+Value State (UP|DOWN)
+Value Auth (\S+)
+Value Assoc (\S+)
+Value Switching (\S+)
+
+Start
+  ^\s*Radio -> WLANs
+
+WLANs
+  ^\s*${Radio}\s+${Vap}\s+${SSID}\s+${State}\s+${Auth}\s+${Assoc}\s+${Switching} -> Record
+  ^\s*$$ -> Start
