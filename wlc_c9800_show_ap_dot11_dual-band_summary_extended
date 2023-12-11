@@ -1,0 +1,14 @@
+Value AP_Name (\S+)
+Value Mac_Address ([a-fA-F0-9:\.]+)
+Value Slot (\d+)
+Value Admin_State (\S+)
+Value Oper_State (\S+)
+Value Width (\S+)
+Value Txpwr (\*?\d+\/\d+ \(\-?\d+ dBm\)|N/A)
+Value Mode (\S+)
+Value Subband (\S+)
+Value Channel (\(\S+\)\*?|N/A)
+Value BSS_Color (\S+)
+
+Start
+  ^${AP_Name}\s+${Mac_Address}\s+${Slot}\s+${Admin_State}\s+${Oper_State}\s+${Width}\s+${Txpwr}\s+${Mode}\s+${Subband}\s+${Channel}\s+${BSS_Color} -> Record
